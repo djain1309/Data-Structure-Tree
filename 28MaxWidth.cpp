@@ -22,10 +22,18 @@ int MaximumWidth(Node* root) {
 
     while (!q.empty()) {
         int size = q.size();
+        // Here we will get the current size of the queue
         int mini = q.front().second;
+        // Then, we will find the minimum value out of those new sets of elements
+        // Means, we will get the previous sets minimum value
 
         for (int i{0}; i < size; i++) {
+
             int curr_id = q.front().second - mini;
+            // curr_id is evaluated using current queue's first element and reduce the index by using mini
+            // Therefore, we will get the 0 index for the first element
+            // And for others, from 0 to indexed
+            
             Node* node = q.front().first;
             q.pop_front();
 
