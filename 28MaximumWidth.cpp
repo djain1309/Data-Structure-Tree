@@ -20,9 +20,7 @@ int maxWidth(Node* root) {
     int ans = 0;
     while (!q.empty()) {
         int size = q.size();
-        cout << "SIZE = " << size << endl;
         int mini = q.front().second;
-        cout << "MINi = " << mini << endl;
 
         int first, last;
 
